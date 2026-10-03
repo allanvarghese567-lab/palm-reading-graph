@@ -1,0 +1,97 @@
+.report-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.report-section.open {
+  border-color: rgba(201, 160, 255, 0.35);
+}
+
+.section-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.15rem;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.section-header:hover {
+  background: var(--bg-elevated);
+}
+
+.section-num {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gold);
+  min-width: 1.8rem;
+}
+
+.section-title {
+  flex: 1;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.chevron {
+  color: var(--text-muted);
+  transition: transform 0.25s ease;
+}
+
+.report-section.open .chevron {
+  transform: rotate(180deg);
+}
+
+.section-body {
+  padding: 0 1.15rem 1.25rem;
+  border-top: 1px solid var(--border);
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem;
+  color: var(--accent);
+}
+
+.section-body h4 {
+  font-size: 0.95rem;
+  margin: 0.85rem 0 0.35rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.section-body p {
+  margin: 0.4rem 0;
+  color: var(--text-muted);
+  font-size: 0.925rem;
+}
+
+.section-body strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.section-body ul {
+  margin: 0.4rem 0 0.6rem 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.925rem;
+}
+
+.section-body li {
+  margin: 0.25rem 0;
+}
