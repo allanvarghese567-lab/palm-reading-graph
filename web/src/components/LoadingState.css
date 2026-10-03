@@ -1,0 +1,70 @@
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.palm-spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.palm-spinner .ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1.4s linear infinite;
+}
+
+.palm-spinner .ring-2 {
+  inset: 8px;
+  border-top-color: var(--gold);
+  animation-duration: 2s;
+  animation-direction: reverse;
+}
+
+.palm-icon {
+  font-size: 1.75rem;
+  z-index: 1;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-step {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--text);
+  min-height: 1.6em;
+}
+
+.progress-bar {
+  width: 100%;
+  max-width: 280px;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-dim), var(--accent));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.loading-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
